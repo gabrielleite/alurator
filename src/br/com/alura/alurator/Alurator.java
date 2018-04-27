@@ -1,6 +1,6 @@
 package br.com.alura.alurator;
 
-import br.com.alura.alurator.protocol.Request;
+import br.com.alura.alurator.protocolo.Request;
 
 public class Alurator {
 	

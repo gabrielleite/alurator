@@ -1,4 +1,4 @@
-package br.com.alura.alurator.protocol;
+package br.com.alura.alurator.protocolo;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -10,7 +10,6 @@ public class QueryParamsBuilder {
 		String[] stringParams = stringQueryParams.split("&");
 		
 		for (String stringParam : stringParams) {
-//			System.out.println(stringParam);
 			String[] paramPair = stringParam.split("=");
 			
 			String keyParam = paramPair[0];

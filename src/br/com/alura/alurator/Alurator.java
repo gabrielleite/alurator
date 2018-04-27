@@ -1,4 +1,4 @@
-package br.com.alura.alurator.reflection;
+package br.com.alura.alurator;
 
 import br.com.alura.alurator.protocol.Request;
 
@@ -13,8 +13,8 @@ public class Alurator {
 	public Object executa(String url) {
 		Request request = new Request(url);
 		
-		// TODO - processa a requisição executando o método
-		// da classe em questão
+		// TODO - processa a requisicao executando o metodo
+		// da classe em questao
 		
 		return null;
 	}

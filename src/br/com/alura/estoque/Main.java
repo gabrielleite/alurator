@@ -2,7 +2,7 @@ package br.com.alura.estoque;
 
 import java.util.Scanner;
 
-import br.com.alura.alurator.reflection.Alurator;
+import br.com.alura.alurator.Alurator;
 
 public class Main {
 

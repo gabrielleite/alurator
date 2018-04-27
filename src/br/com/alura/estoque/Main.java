@@ -13,8 +13,7 @@ public class Main {
 	public static void main(String[] args) throws Exception {
 		
 		/*
-		 * Casos possíveis:
-		 * /controlador/id
+		 * Casos possiveis:
 		 * /controlador/metodo
 		 * /controlador/metodo?param1=valor1&param2=valor2
 		 */

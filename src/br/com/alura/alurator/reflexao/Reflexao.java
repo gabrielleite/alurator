@@ -10,7 +10,11 @@ public class Reflexao {
 		}
 	}
 	
-	public ClasseManipulador refleteClasse(String fqn) {
-		return new ClasseManipulador(getClasse(fqn));
+	public ManipuladorClasse refleteClasse(String fqn) {
+		return new ManipuladorClasse(getClasse(fqn));
+	}
+	
+	public ManipuladorObjeto refleteObjeto(Object alvo) {
+		return new ManipuladorObjeto(alvo);
 	}
 }

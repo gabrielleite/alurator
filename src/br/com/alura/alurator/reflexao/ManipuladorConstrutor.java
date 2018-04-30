@@ -3,11 +3,11 @@ package br.com.alura.alurator.reflexao;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 
-public class ConstrutorManipulador {
+public class ManipuladorConstrutor {
 
 	private Constructor<?> construtor;
 
-	public ConstrutorManipulador(Constructor<?> construtor) {
+	public ManipuladorConstrutor(Constructor<?> construtor) {
 		this.construtor = construtor;
 	}
 	

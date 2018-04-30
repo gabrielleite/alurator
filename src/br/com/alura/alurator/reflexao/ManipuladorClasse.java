@@ -1,16 +1,16 @@
 package br.com.alura.alurator.reflexao;
 
-public class ClasseManipulador {
+public class ManipuladorClasse {
 
 	private Class<?> classe;
 
-	public ClasseManipulador(Class<?> classe) {
+	public ManipuladorClasse(Class<?> classe) {
 		this.classe = classe;
 	}
 	
-	public ConstrutorManipulador getConstrutorPadrao() {
+	public ManipuladorConstrutor getConstrutorPadrao() {
 		try {
-			return new ConstrutorManipulador(classe.getConstructor());
+			return new ManipuladorConstrutor(classe.getConstructor());
 		} catch (NoSuchMethodException | SecurityException e) {
 			e.printStackTrace();
 			throw new RuntimeException(e);

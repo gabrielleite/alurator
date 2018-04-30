@@ -19,16 +19,11 @@ public class Alurator {
 		String nomeControle = request.getNomeControle();
 		String nomeMetodo = request.getNomeMetodo();
 		
-		Object instanciaControle = new Reflexao()
-										.refleteClasse(basePackage + nomeControle)
-										.getConstrutorPadrao()
+		Object retorno = new Reflexao().refleteClasse(basePackage + nomeControle)
+										.criaInstancia()
+										.getMetodo(nomeMetodo)
 										.invocar();
 		
-		Object retorno = new Reflexao().refleteObjeto(instanciaControle)
-										.getMetodo(nomeMetodo )
-										.invocar();
-			
-		System.out.println(instanciaControle);
 		System.out.println(retorno);
 		
 		return retorno;

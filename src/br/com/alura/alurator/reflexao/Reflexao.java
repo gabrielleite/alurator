@@ -9,4 +9,8 @@ public class Reflexao {
 			throw new RuntimeException(e);
 		}
 	}
+	
+	public ClasseManipulador refleteClasse(String fqn) {
+		return new ClasseManipulador(getClasse(fqn));
+	}
 }

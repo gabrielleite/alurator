@@ -2,6 +2,8 @@ package br.com.alura.alurator;
 
 import java.lang.reflect.InvocationTargetException;
 
+import br.com.alura.alurator.protocolo.Request;
+
 public class Alurator {
 	
 	private String basePackage;
@@ -13,15 +15,9 @@ public class Alurator {
 	public Object executa(String url) {
 		// TODO - processa a requisicao executando o metodo
 		// da classe em questao
+		Request request = new Request(url);
 		
-		String[] partesUrl = url.replaceFirst("/", "")
-				.split("/");
-
-		String nomeControle = partesUrl[0];
-		
-		nomeControle = Character.toUpperCase(nomeControle.charAt(0))
-								+ nomeControle.substring(1)
-								+ "Controller";
+		String nomeControle = request.getNomeControle();
 		
 		try {
 			Class<?> classeControle = Class.forName(basePackage + nomeControle);

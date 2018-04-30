@@ -6,16 +6,16 @@ import java.util.Map;
 public class QueryParamsBuilder {
 	private Map<String, Object> queryParams = new HashMap<>();
 
-	public QueryParamsBuilder withParams(String stringQueryParams) {
+	public QueryParamsBuilder comParametros(String stringQueryParams) {
 		String[] stringParams = stringQueryParams.split("&");
 		
 		for (String stringParam : stringParams) {
-			String[] paramPair = stringParam.split("=");
+			String[] chaveEValor = stringParam.split("=");
 			
-			String keyParam = paramPair[0];
-			Object valueParam = paramPair[1];
+			String chave = chaveEValor[0];
+			Object valor = chaveEValor[1];
 			
-			queryParams.put(keyParam, valueParam);
+			queryParams.put(chave, valor);
 		}
 		
 		return this;

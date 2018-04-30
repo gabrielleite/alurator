@@ -1,5 +1,7 @@
 package br.com.alura.alurator;
 
+import java.util.Map;
+
 import br.com.alura.alurator.protocolo.Request;
 import br.com.alura.alurator.reflexao.Reflexao;
 
@@ -18,11 +20,12 @@ public class Alurator {
 		
 		String nomeControle = request.getNomeControle();
 		String nomeMetodo = request.getNomeMetodo();
+		Map<String, Object> queryParams = request.getQueryParams();
 		
 		Object retorno = new Reflexao().refleteClasse(basePackage + nomeControle)
 										.criaInstancia()
-										.getMetodo(nomeMetodo)
-										.invocar();
+										.getMetodo(nomeMetodo, queryParams)
+										.invocar(queryParams);
 		
 		System.out.println(retorno);
 		

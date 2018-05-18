@@ -26,6 +26,6 @@ public class ManipuladorObjeto {
 									)
 								.findFirst()
 								.orElseThrow(() -> new RuntimeException("Método não encontrado!"));
-		return new ManipuladorMetodo(alvo, metodoSelecionado);
+		return new ManipuladorMetodo(alvo, metodoSelecionado, args);
 	}
 }

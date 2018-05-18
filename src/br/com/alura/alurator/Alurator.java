@@ -25,7 +25,11 @@ public class Alurator {
 		Object retorno = new Reflexao().refleteClasse(basePackage + nomeControle)
 										.criaInstancia()
 										.getMetodo(nomeMetodo, queryParams)
-										.invocar(queryParams);
+										.comTratamentoDeExcecao((metodo, e) -> {
+											System.out.println("Erro no método " + metodo.getName() + " da classe " + metodo.getDeclaringClass().getName() + ".\n\n");
+											throw new RuntimeException("ERRO!");
+										})
+										.invocar();
 		
 		System.out.println(retorno);
 		

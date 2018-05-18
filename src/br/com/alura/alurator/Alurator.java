@@ -2,6 +2,7 @@ package br.com.alura.alurator;
 
 import java.util.Map;
 
+import br.com.alura.alurator.conversor.ConversorXML;
 import br.com.alura.alurator.protocolo.Request;
 import br.com.alura.alurator.reflexao.Reflexao;
 
@@ -30,6 +31,8 @@ public class Alurator {
 											throw new RuntimeException("ERRO!");
 										})
 										.invocar();
+		
+		retorno = new ConversorXML().converte(retorno);
 		
 		System.out.println(retorno);
 		

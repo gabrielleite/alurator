@@ -15,8 +15,7 @@ public class ProdutoController {
 	}
 	
 	public List<Produto> lista() {
-		throw new RuntimeException();
-//		return produtoDao.lista();
+		return produtoDao.lista();
 	}
 	
 	public Produto obtem(Integer id) {
